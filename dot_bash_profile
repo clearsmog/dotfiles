@@ -1,0 +1,3 @@
+# added by Servbay
+export PATH=/Applications/ServBay/bin:/Applications/ServBay/sbin:/Applications/ServBay/script:$PATH
+. "$HOME/.local/bin/env"

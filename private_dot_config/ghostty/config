@@ -1,0 +1,161 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/qiankun/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+#
+# Ghostty can reload the configuration while running by using the menu
+# options or the bound key (default: Command + Shift + comma on macOS and
+# Control + Shift + comma on other platforms). Not all config options can be
+# reloaded while running; some only apply to new windows and others may require
+# a full restart to take effect.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# ghostty +show-config --default --docs
+# ghostty +list-themes
+
+font-family                    = FiraCode Nerd Font Mono
+font-family                    = Symbols Nerd Font Mono
+font-family                    = PingFang SC
+# font-family-bold               = PragmataPro Liga
+# font-family-italic             = PragmataPro Liga
+# font-family-bold-italic        = PragmataPro Liga
+
+font-feature                   = FiraCode-Retina
+font-feature                   = +zero
+# font-feature                   = +onum
+font-feature                   = calt
+font-feature                   = liga
+font-feature                   = ss13
+font-codepoint-map             = U+4E00-U+9FFF=Sarasa Mono SC Regular
+font-codepoint-map             = U+3400-U+4DBF=Sarasa Mono SC Regular
+font-size                      = 13
+font-thicken                   = true
+
+window-inherit-font-size       = true
+
+# Window
+window-height                  = 30
+window-width                   = 100
+
+# Look and Feel
+adjust-cursor-thickness        = 3
+adjust-underline-position      = 3
+bold-is-bright                 = true
+cursor-invert-fg-bg            = true
+cursor-opacity                 = 0.8
+cursor-style                   = bar
+link-url                       = true
+mouse-hide-while-typing        = true
+theme                          = dark:tokyonight_night,light:tokyonight_night
+window-vsync                   = true
+# background-opacity             = 0.9
+background-blur                = true
+
+# Shader
+# custom-shader-animation        = always
+
+custom-shader                  = shaders/sparks-from-fire.glsl
+# custom-shader                  = shaders/earth.glsl
+# custom-shader                  = shaders/solar.glsl
+# custom-shader                  = shaders/universe.glsl
+
+# custom-shader                  = shaders/animated-gradient-shader.glsl
+# custom-shader                  = shaders/bettercrt.glsl
+# custom-shader                  = shaders/bloom.glsl
+# custom-shader                  = shaders/cineShader-Lava.glsl
+# custom-shader                  = shaders/crt.glsl
+# custom-shader                  = shaders/cubes.glsl
+# custom-shader                  = shaders/cursor_blaze.glsl
+# custom-shader                  = shaders/dither.glsl
+# custom-shader                  = shaders/drunkard.glsl
+# custom-shader                  = shaders/fireworks-rockets.glsl
+# custom-shader                  = shaders/fireworks.glsl
+# custom-shader                  = shaders/galaxy.glsl
+# custom-shader                  = shaders/gears-and-belts.glsl
+# custom-shader                  = shaders/glitchy.glsl
+# custom-shader                  = shaders/glow-rgbsplit-twitchy.glsl
+# custom-shader                  = shaders/gradient-background.glsl
+# custom-shader                  = shaders/in-game-crt.glsl
+# custom-shader                  = shaders/inside-the-matrix.glsl
+# custom-shader                  = shaders/just-snow.glsl
+# custom-shader                  = shaders/matrix-hallway.glsl
+# custom-shader                  = shaders/mnoise.glsl
+# custom-shader                  = shaders/negative.glsl
+# custom-shader                  = shaders/retro-terminal.glsl
+# custom-shader                  = shaders/sin-interference.glsl
+# custom-shader                  = shaders/smoke-and-ghost.glsl
+
+# custom-shader                  = shaders/spotlight.glsl
+# custom-shader                  = shaders/starfield-colors.glsl
+# custom-shader                  = shaders/starfield.glsl
+# custom-shader                  = shaders/tft.glsl
+# custom-shader                  = shaders/underwater.glsl
+# custom-shader                  = shaders/water.glsl
+
+# Other
+clipboard-paste-protection     = true
+clipboard-trim-trailing-spaces = true
+copy-on-select                 = true
+macos-auto-secure-input        = true
+macos-secure-input-indication  = true
+macos-titlebar-style           = tabs
+macos-option-as-alt            = true
+quit-after-last-window-closed  = true
+scrollback-limit               = 4200
+shell-integration              = fish
+shell-integration-features     = cursor,sudo,title
+
+# Key bindings
+keybind                        = ctrl+h=goto_split:left
+keybind                        = ctrl+j=goto_split:bottom
+keybind                        = ctrl+k=goto_split:top
+keybind                        = ctrl+l=goto_split:right
+keybind                        = ctrl+shift+h=new_split:left
+keybind                        = ctrl+shift+j=new_split:down
+keybind                        = ctrl+shift+k=new_split:up
+keybind                        = ctrl+shift+l=new_split:right
+keybind                        = super+shift+enter=new_split:auto
+keybind                        = super+shift+i=inspector:toggle
+keybind                        = super+shift+r=reload_config
+keybind                        = super+t=new_tab
+
+# Command
+command = /opt/homebrew/bin/fish
