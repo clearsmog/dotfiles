@@ -131,3 +131,7 @@ export ANTHROPIC_BASE_URL="http://localhost:8080"
 export ANTHROPIC_AUTH_TOKEN="test"
 export ANTHROPIC_BASE_URL="http://localhost:8080"
 export ANTHROPIC_AUTH_TOKEN="test"
+
+# cht.sh cheat sheet alias
+alias cht="cht.sh"
+export PATH="$HOME/bin:$PATH"

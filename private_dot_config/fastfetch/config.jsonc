@@ -1,28 +1,144 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "Apple",
+    "color": {
+      "1": "38;2;20;60;160",
+      "2": "38;2;40;100;200",
+      "3": "38;2;60;150;230",
+      "4": "38;2;90;190;250",
+      "5": "38;2;140;220;255",
+      "6": "38;2;200;240;255"
+    },
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "pipe": false,
+    "color": {
+      "keys": "38;2;90;190;250",
+      "title": "38;2;90;190;250",
+      "separator": "38;2;140;220;255"
+    },
+    "brightColor": false,
+    "key": {
+      "width": 10
+    },
+    "percent": {
+      "type": ["bar", "num"],
+      "ndigits": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "━",
+        "total": "─"
+      },
+      "border": {
+        "left": "",
+        "right": ""
+      },
+      "color": {
+        "elapsed": "38;2;60;150;230",
+        "total": "38;2;60;80;100"
+      },
+      "width": 12
+    }
+  },
   "modules": [
-    "separator",
-    "os",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "terminal",
-    "terminalfont",
-    "memory",
-    "swap",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
+    {
+      "type": "title",
+      "key": " ",
+      "color": {
+        "user": "38;2;90;190;250",
+        "at": "38;2;140;220;255",
+        "host": "38;2;200;240;255"
+      }
+    },
+    {
+      "type": "separator",
+      "string": "─",
+      "outputColor": "38;2;60;150;230"
+    },
+    {
+      "type": "os",
+      "key": "  OS"
+    },
+    {
+      "type": "kernel",
+      "key": "  Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "  Uptime"
+    },
     "break",
-    "colors"
+    {
+      "type": "shell",
+      "key": "  Shell"
+    },
+    {
+      "type": "terminal",
+      "key": "  Term"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": " 󰻠 CPU",
+      "temp": false
+    },
+    {
+      "type": "gpu",
+      "key": " 󰍛 GPU",
+      "detectionMethod": "auto"
+    },
+    {
+      "type": "memory",
+      "key": "  Mem",
+      "percent": {
+        "green": 60,
+        "yellow": 80
+      }
+    },
+    {
+      "type": "disk",
+      "key": "  Disk",
+      "folders": "/",
+      "percent": {
+        "green": 60,
+        "yellow": 80
+      }
+    },
+    "break",
+    {
+      "type": "battery",
+      "key": " 󰁹 Batt",
+      "percent": {
+        "green": 60,
+        "yellow": 30
+      }
+    },
+    {
+      "type": "localip",
+      "key": " 󰩟 IP",
+      "showIpv4": true,
+      "showIpv6": false,
+      "showMac": false,
+      "defaultRouteOnly": true
+    },
+    "break",
+    {
+      "type": "colors",
+      "key": " ",
+      "symbol": "circle",
+      "paddingLeft": 0,
+      "block": {
+        "width": 3,
+        "range": [0, 7]
+      }
+    }
   ]
 }

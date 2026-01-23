@@ -2,4 +2,4 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
 SETUVAR __fish_webconfig_theme_notification:set\x2dtheme\x2dv1\x2d\x234
-SETUVAR fish_user_paths:/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/qiankun/bin\x1e/opt/homebrew/bin

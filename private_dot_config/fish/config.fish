@@ -11,6 +11,10 @@ alias python python3
 
 alias pip pip3
 
+# cht.sh cheat sheet
+fish_add_path ~/bin
+alias cht "cht.sh"
+
 function claude
     # Check if proxy is running
     if curl -s --connect-timeout 1 http://localhost:8080/health > /dev/null 2>&1
