@@ -51,9 +51,10 @@
 # ghostty +show-config --default --docs
 # ghostty +list-themes
 
-font-family                    = FiraCode Nerd Font Mono
+font-family                    = Lilex Nerd Font Mono
+# font-family                    = FiraCode Nerd Font Mono
 font-family                    = Symbols Nerd Font Mono
-font-family                    = PingFang SC
+font-family                    = LXGW WenKai
 # font-family-bold               = PragmataPro Liga
 # font-family-italic             = PragmataPro Liga
 # font-family-bold-italic        = PragmataPro Liga
@@ -64,35 +65,36 @@ font-feature                   = +zero
 font-feature                   = calt
 font-feature                   = liga
 font-feature                   = ss13
-font-codepoint-map             = U+4E00-U+9FFF=Sarasa Mono SC Regular
-font-codepoint-map             = U+3400-U+4DBF=Sarasa Mono SC Regular
+font-codepoint-map             = U+4E00-U+9FFF=LXGW WenKai
+font-codepoint-map             = U+3400-U+4DBF=LXGW WenKai
 font-size                      = 13
 font-thicken                   = true
 
 window-inherit-font-size       = true
 
 # Window
-window-height                  = 30
-window-width                   = 100
+window-height                  = 60
+window-width                   = 120
 
 # Look and Feel
 adjust-cursor-thickness        = 3
 adjust-underline-position      = 3
 bold-is-bright                 = true
-cursor-invert-fg-bg            = true
+cursor-invert-fg-bg            = false
 cursor-opacity                 = 0.8
 cursor-style                   = bar
 link-url                       = true
 mouse-hide-while-typing        = true
-theme                          = dark:tokyonight_night,light:tokyonight_night
+theme                          = claude-light
 window-vsync                   = true
 # background-opacity             = 0.9
 background-blur                = true
 
 # Shader
-# custom-shader-animation        = always
+custom-shader-animation        = always
 
-custom-shader                  = shaders/sparks-from-fire.glsl
+custom-shader = shaders/claude-ambient.glsl
+# custom-shader                  = shaders/sparks-from-fire.glsl
 # custom-shader                  = shaders/earth.glsl
 # custom-shader                  = shaders/solar.glsl
 # custom-shader                  = shaders/universe.glsl
@@ -159,3 +161,13 @@ keybind                        = super+t=new_tab
 
 # Command
 command = /opt/homebrew/bin/fish
+
+# --- Improvements ---
+# Visual Polish
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+
+
+# Maintenance
+auto-update = check
