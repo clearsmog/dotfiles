@@ -6,9 +6,9 @@
       "1": "38;2;20;60;160",
       "2": "38;2;40;100;200",
       "3": "38;2;60;150;230",
-      "4": "38;2;90;190;250",
-      "5": "38;2;140;220;255",
-      "6": "38;2;200;240;255"
+      "4": "38;2;70;170;230",
+      "5": "38;2;90;150;210",
+      "6": "38;2;120;170;220"
     },
     "padding": {
       "top": 0,
@@ -17,6 +17,9 @@
     }
   },
   "display": {
+    "size": {
+      "binaryPrefix": "si"
+    },
     "separator": "  ",
     "pipe": false,
     "color": {
@@ -26,7 +29,7 @@
     },
     "brightColor": false,
     "key": {
-      "width": 10
+      "width": 14
     },
     "percent": {
       "type": ["bar", "num"],
@@ -53,9 +56,9 @@
       "type": "title",
       "key": " ",
       "color": {
-        "user": "38;2;90;190;250",
-        "at": "38;2;140;220;255",
-        "host": "38;2;200;240;255"
+        "user": "38;2;40;100;200",
+        "at": "38;2;60;130;210",
+        "host": "38;2;80;150;220"
       }
     },
     {
@@ -65,39 +68,24 @@
     },
     {
       "type": "os",
-      "key": "  OS"
+      "key": " 󰀵 OS"
     },
     {
-      "type": "kernel",
-      "key": "  Kernel"
+      "type": "packages",
+      "key": " 󰏖 Pkgs"
     },
     {
       "type": "uptime",
-      "key": "  Uptime"
+      "key": " 󰅐 Uptime"
     },
     "break",
     {
-      "type": "shell",
-      "key": "  Shell"
-    },
-    {
-      "type": "terminal",
-      "key": "  Term"
-    },
-    "break",
-    {
-      "type": "cpu",
-      "key": " 󰻠 CPU",
-      "temp": false
-    },
-    {
-      "type": "gpu",
-      "key": " 󰍛 GPU",
-      "detectionMethod": "auto"
+      "type": "cpuusage",
+      "key": " 󰻠 CPU"
     },
     {
       "type": "memory",
-      "key": "  Mem",
+      "key": " 󰍛 Mem",
       "percent": {
         "green": 60,
         "yellow": 80
@@ -105,12 +93,13 @@
     },
     {
       "type": "disk",
-      "key": "  Disk",
+      "key": " 󰋊 Disk",
       "folders": "/",
       "percent": {
         "green": 60,
         "yellow": 80
-      }
+      },
+      "format": "{size-used} / {size-total} ({size-percentage})"
     },
     "break",
     {
@@ -120,6 +109,11 @@
         "green": 60,
         "yellow": 30
       }
+    },
+    {
+      "type": "wifi",
+      "key": " 󰖩 WiFi",
+      "format": "{ssid}"
     },
     {
       "type": "localip",

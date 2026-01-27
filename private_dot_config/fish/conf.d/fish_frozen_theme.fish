@@ -7,7 +7,7 @@
 
 set --global fish_color_autosuggestion 777777
 set --global fish_color_cancel --reverse
-set --global fish_color_command 00FF00
+set --global fish_color_command 2A9D8F
 set --global fish_color_comment 30BE30
 set --global fish_color_cwd green
 set --global fish_color_cwd_root red

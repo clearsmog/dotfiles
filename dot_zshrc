@@ -135,3 +135,14 @@ export ANTHROPIC_AUTH_TOKEN="test"
 # cht.sh cheat sheet alias
 alias cht="cht.sh"
 export PATH="$HOME/bin:$PATH"
+
+# Fastfetch - only run once per terminal session (not on splits)
+if [[ -z "$FASTFETCH_RAN" ]]; then
+    export FASTFETCH_RAN=1
+    fastfetch
+fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/qiankun/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

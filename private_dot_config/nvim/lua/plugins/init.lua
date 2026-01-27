@@ -6,16 +6,35 @@ return {
   },
 
   {
-    "greggh/claude-code.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      require("claude-code").setup()
-    end,
+    "coder/claudecode.nvim",
+    config = true,
     keys = {
-      { "<leader>cc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude Code" },
-      { "<leader>cC", "<cmd>ClaudeCodeContinue<cr>", desc = "Continue Claude conversation" },
+      { "<leader>cc", "<cmd>ClaudeCodeToggle<cr>", desc = "Toggle Claude Code" },
+      { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude Code" },
+      { "<leader>ca", "<cmd>ClaudeCodeSendAccept<cr>", desc = "Accept diff" },
+      { "<leader>cd", "<cmd>ClaudeCodeSendReject<cr>", desc = "Reject diff" },
+    },
+  },
+
+  -- Markdown rendering in terminal
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {},
+  },
+
+  -- Image display (uses Kitty graphics protocol - works with Ghostty)
+  {
+    "3rd/image.nvim",
+    ft = { "markdown", "norg" },
+    opts = {
+      backend = "kitty",
+      integrations = {
+        markdown = { enabled = true },
+      },
+      max_width = 100,
+      max_height = 30,
     },
   },
 

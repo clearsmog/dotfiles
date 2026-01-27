@@ -18,36 +18,10 @@
             "command": "node \"$HOME/.claude/hooks/gsd-check-update.js\""
           }
         ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"$HOME/.claude/hooks/gsd-intel-session.js\""
-          }
-        ]
       }
     ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"$HOME/.claude/hooks/gsd-intel-index.js\""
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"$HOME/.claude/hooks/gsd-intel-prune.js\""
-          }
-        ]
-      }
-    ]
+    "PostToolUse": [],
+    "Stop": []
   },
   "statusLine": {
     "type": "command",
@@ -114,7 +88,8 @@
     "hookify@claude-plugins-official": true,
     "huggingface-skills@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "typst-skills@ypares-agent-skills": true
+    "typst-skills@ypares-agent-skills": true,
+    "stata-analyst@sociology-analysis-agents": true
   },
   "autoUpdatesChannel": "stable"
 }

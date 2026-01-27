@@ -51,7 +51,8 @@
 # ghostty +show-config --default --docs
 # ghostty +list-themes
 
-font-family                    = Lilex Nerd Font Mono
+font-family                    = CommitMono
+# font-family                    = Lilex Nerd Font Mono
 # font-family                    = FiraCode Nerd Font Mono
 font-family                    = Symbols Nerd Font Mono
 font-family                    = LXGW WenKai
@@ -94,6 +95,7 @@ background-blur                = true
 custom-shader-animation        = always
 
 custom-shader = shaders/claude-ambient.glsl
+# custom-shader                  = shaders/claude-comfort-green.glsl
 # custom-shader                  = shaders/sparks-from-fire.glsl
 # custom-shader                  = shaders/earth.glsl
 # custom-shader                  = shaders/solar.glsl
@@ -138,7 +140,7 @@ clipboard-trim-trailing-spaces = true
 copy-on-select                 = true
 macos-auto-secure-input        = true
 macos-secure-input-indication  = true
-macos-titlebar-style           = tabs
+macos-titlebar-style           = hidden
 macos-option-as-alt            = true
 quit-after-last-window-closed  = true
 scrollback-limit               = 4200
@@ -155,6 +157,8 @@ keybind                        = ctrl+shift+j=new_split:down
 keybind                        = ctrl+shift+k=new_split:up
 keybind                        = ctrl+shift+l=new_split:right
 keybind                        = super+shift+enter=new_split:auto
+keybind                        = super+enter=toggle_fullscreen
+keybind                        = super+f=toggle_maximize
 keybind                        = super+shift+i=inspector:toggle
 keybind                        = super+shift+r=reload_config
 keybind                        = super+t=new_tab
