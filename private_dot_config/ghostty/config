@@ -98,7 +98,7 @@ custom-shader = shaders/claude-ambient.glsl
 # custom-shader                  = shaders/claude-comfort-green.glsl
 # custom-shader                  = shaders/sparks-from-fire.glsl
 # custom-shader                  = shaders/earth.glsl
-# custom-shader                  = shaders/solar.glsl
+#custom-shader                  = shaders/solar.glsl
 # custom-shader                  = shaders/universe.glsl
 
 # custom-shader                  = shaders/animated-gradient-shader.glsl
