@@ -18,3 +18,7 @@ alias pip pip3
 fish_add_path ~/bin
 alias cht "cht.sh"
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

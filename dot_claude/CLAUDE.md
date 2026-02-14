@@ -32,6 +32,18 @@
 ## Python
 - Use `uv` for package management (not pip/conda)
 - Workflow: check `.venv` exists → if not `uv venv` first → then `uv pip install <pkg> && uv run <script>`
+- **iCloud-synced directories** (`~/Documents`, `~/Desktop`): create venvs as `.venv.nosync` with a `.venv` symlink to avoid syncing thousands of package files. Use: `uv venv .venv.nosync && ln -s .venv.nosync .venv`
+
+## PDF Handling
+- Before reading any PDF, run `uv run --script ~/.claude/scripts/parse_pdf.py "<path>" --info-only` to check page count and empty pages.
+- If pages > 10: extract to `.parsed.md` first via `uv run --script ~/.claude/scripts/parse_pdf.py "<path>"`, then Read the `.parsed.md` instead.
+- If pages <= 10: Read the PDF directly.
+- If a `.parsed.md` already exists next to the PDF, read that instead of the PDF.
+- If `--info-only` shows `empty_pages / pages > 0.5`: the PDF is likely scanned. Use the OCR script instead: `uv run --script ~/.claude/scripts/parse_pdf_ocr.py "<path>"`.
+
+## Browser Automation
+- Playwright CLI is installed (`npx playwright`). Use it for screenshots, scraping, or verifying web pages when needed.
+- Prefer Playwright over `WebFetch` for JS-rendered pages, SPAs, or visual verification.
 
 ## Data Sources
 - Refinitiv Codebook is available for ESG, fundamentals, and institutional data. Requires Refinitiv Workspace — Codebook scripts cannot run locally.
